@@ -11,6 +11,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html,body,#root {
+    overflow-x: hidden;
+}
+
 .section__home {
     display:flex;
     justify-content: center;
@@ -41,6 +45,11 @@ html {
     z-index:30;
 }
 
+.link {
+    @apply hover:bg-white hover:text-primary text-white p-2 rounded flex justify-center items-center md:text-black
+}
+
 .link.active {
     color: #0099ff;
+    @apply bg-white rounded
 }
