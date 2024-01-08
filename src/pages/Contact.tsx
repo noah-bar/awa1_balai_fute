@@ -79,6 +79,7 @@ const Contact = () => {
                                 animate={visible ? {opacity: 1} : ""}
                                 transition={{delay: 1}}
                                 type={"submit"}
+                                value={"Envoyer"}
                                 className={"p-2 bg-white rounded-lg text-primary active:bg-primary active:text-white active:border active:border-white cursor-pointer"}
                             />
                         </form>
