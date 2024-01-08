@@ -9,7 +9,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            if(isMobile !== (window.innerWidth <= 768)) {
+            if (isMobile !== (window.innerWidth <= 768)) {
                 setIsMobile(window.innerWidth <= 768)
                 setOpen(window.innerWidth > 768)
             }
@@ -40,7 +40,7 @@ const Navbar = () => {
     }, []);
 
     const handleLinkClick = () => {
-        if(isMobile) setOpen(false)
+        if (isMobile) setOpen(false)
     }
 
     return <>
@@ -50,11 +50,20 @@ const Navbar = () => {
             transition={{type: "linear"}}
             className={"absolute overflow-hidden top-0 left-0 w-full h-screen bg-primary text-white z-50 flex justify-center items-center md:relative md:w-auto md:h-auto md:bg-transparent"}>
             <ul className="flex flex-col gap-4 justify-center items-center text-5xl md:flex-row">
-                <li onClick={handleLinkClick} className={"link home-link active"}><a href="#home" className={navItem}>Accueil</a></li>
-                <li onClick={handleLinkClick} className={"link services-link"}><a href="#services" className={navItem}>Services</a></li>
-                <li onClick={handleLinkClick} className={"link we-link"}><a href="#we" className={navItem}>Nous</a></li>
-                <li onClick={handleLinkClick} className={"link security-link"}><a href="#security" className={navItem}>Sécurité</a></li>
-                <li onClick={handleLinkClick} className={"link contact-link"}><a href="#contact" className={navItem}>Contact</a></li>
+                <li className={"link home-link active"}>
+                    <a onClick={handleLinkClick} href="#home" className={navItem}>Accueil</a>
+                </li>
+                <li className={"link services-link"}>
+                    <a onClick={handleLinkClick} href="#services" className={navItem}>Services</a>
+                </li>
+                <li className={"link we-link"}>
+                    <a onClick={handleLinkClick} href="#we" className={navItem}>Nous</a></li>
+                <li className={"link security-link"}>
+                    <a onClick={handleLinkClick} href="#security" className={navItem}>Sécurité</a>
+                </li>
+                <li className={"link contact-link"}>
+                    <a onClick={handleLinkClick} href="#contact" className={navItem}>Contact</a>
+                </li>
             </ul>
         </motion.nav>
         <motion.svg
